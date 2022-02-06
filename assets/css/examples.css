@@ -41,3 +41,13 @@
     position: relative;
     top: 450px;
 }  */
+
+/* ---------------------- z-index example */
+
+/* .layer1{
+    z-index: 20;
+} */
+
+/* .layer2{
+        z-index: 10;
+} */

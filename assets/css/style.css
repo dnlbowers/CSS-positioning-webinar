@@ -164,6 +164,48 @@ nav ul li a {
 }
 
 
+/* -----------------------------z=index */
+
+#z-index {
+    position: relative;
+    height: 600px;
+}
+
+#z-index > div {
+    height: 150px;
+    width: 150px;
+    border: 1px solid #000;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 75px;
+}
+
+.layer1 {
+    background-color: #a52a2a;
+    position: absolute;
+    top: 250px;
+    left: 400px;
+}
+
+.layer2 {
+    background: linear-gradient(to right, #ae8625, #f7ef8a, #d2ac47, #edc967);
+    position: absolute;
+    top: 325px;
+    left: 475px;
+}
+
+.layer3 {
+    background-color: rgb(67, 140, 213);
+    position: absolute;
+    top: 400px;
+    left: 550px;
+}
+
+#last-section {
+    margin-bottom: 50px;
+}
+
+
 
 
 
