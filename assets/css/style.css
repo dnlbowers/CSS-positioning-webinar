@@ -96,6 +96,10 @@ nav ul li a {
 
 }
 
+.second-heading {
+    margin-top: 26px;
+}
+
 /* -------------------------------boxes */
 .box {
     
@@ -107,6 +111,56 @@ nav ul li a {
     text-align: center;
     line-height: 150px;
     font-size: 1.75rem;
+}
+
+/* ---------------------------------- positioning keywords */
+#position {
+    height: 600px;
+    position: relative;
+}
+
+#position span{
+    
+    height: 80px;
+    width: 200px;
+    font-size: 2.5rem;
+    color: #000;
+    background-color: rgb(67, 140, 213);
+    border-radius: 20px;
+    text-align: center;
+}
+
+.fas {
+    font-size: 2rem;
+    margin-top: 10%;
+}
+
+.top-position {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bottom-position {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.left-position {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.right-position {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 
