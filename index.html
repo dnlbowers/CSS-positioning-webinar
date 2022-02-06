@@ -13,6 +13,7 @@
         <header>
             <h1 class="heading">CSS Positioning</h1>
             <h2 class="line-break">Webinar</h2>
+
             <nav class=".flex-container line-break">
                 <ul class="no-list-style">
                     <li><a href="" class="no-decor">Intro</a></li>
@@ -24,7 +25,7 @@
                 </ul>
             </nav>
         </header>
-        
+        <!-- Intro  -->
             <main class="text-center">
                 <div class="container">
                     <section id="intro">
@@ -43,6 +44,50 @@
                         </section>
                     </section>
                 </div>
+                
+                <!-- absolute example -->
+                <section>
+                    <h2 class="line-break">Position Absolute</h2>
+                    <p>Takes things out of the document flow, so if we make box two position absolute, three and four will move up.</p>
+                    <div class="container">
+                        <div class="inner-container absolute" id='absolute'>
+                            <div class="box" id='one'>One</div>
+                            <div class="box" id='two'>Two</div>
+                            <div class="box" id='three'>Three</div>
+                            <div class="box" id='four'>Four</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- relative example -->
+                <section>
+                    <h2>Position Relative</h2>
+                    <p>Keeps things in the document flow, so if we make position box six, seven and eight will remain where they are.</p>
+                    <div class="container">
+                        <div class="inner-container relative" id='relative'>
+                            <div class="box" id='five'>Five</div>
+                            <div class="box" id='six'>Six</div>
+                            <div class="box" id='seven'>Seven</div>
+                            <div class="box" id='eight'>Eight</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Fixed example  -->
+                <section>
+                    <h2>Position Fixed</h2>
+                    <p>This positions things relative to the viewport - the browser window itself. As it is positioned relative to the browser window itself, if the browser is resized it will move with the browser. It will sit in front of everything else, although you can change this using z-index.</p>
+                <div class="container">   
+                    <div class="inner-container fixed" id='fixed'>
+                            <div class="box" id='nine'>Nine</div>
+                            <div class="box" id='ten'>Ten</div>
+                            <div class="box" id='eleven'>Eleven</div>
+                            <div class="box" id='tweleve'>Twelve</div>
+                        </div>
+                    </div> 
+                </section>
+                
+                <!-- Sticky example -->
                 <section>
                     <h2>Position Sticky</h2>
                     <p>This allows you to position something relative to the container element, until a condition is met. Then it becomes fixed. NOTE: This is all in relation to the containing element. So if you put position sticky on an element within the body, it'll be in relation to the entire page. If you put it on another element, it will become sticky or fixed, until it reaches the opposite edge of the container. Then it'll go back to relative.</p>
@@ -63,31 +108,6 @@
                         </div>
                     </div>
                 </section>
-                <section>
-                    <h2 class="line-break">Position Absolute</h2>
-                    <p>Takes things out of the document flow, so if we make box two position absolute, three and four will move up.</p>
-                    <div class="container">
-                        <div class="inner-container absolute" id='absolute'>
-                            <div class="box" id='one'>One</div>
-                            <div class="box" id='two'>Two</div>
-                            <div class="box" id='three'>Three</div>
-                            <div class="box" id='four'>Four</div>
-                        </div>
-                    </div>
-                </section>
-                <section>
-                    <h2>Position Relative</h2>
-                    <p>Keeps things in the document flow, so if we make position box six, seven and eight will remain where they are.</p>
-                    <div class="container">
-                        <div class="inner-container relative" id='relative'>
-                            <div class="box" id='five'>Five</div>
-                            <div class="box" id='six'>Six</div>
-                            <div class="box" id='seven'>Seven</div>
-                            <div class="box" id='eight'>Eight</div>
-                        </div>
-                    </div>
-                </section>
-
 
             </main>
         

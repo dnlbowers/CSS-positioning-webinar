@@ -11,6 +11,15 @@
     top: 0px;
 } */
 
+/* ---------------------- Position Fixed example */
+ 
+/*#ten {
+    position: fixed;
+    top: 400px;
+    right: 500px;
+} */
+
+
 /* ---------------------- Position Absolute example*/
 /* .absolute {
     position: relative;
@@ -30,5 +39,6 @@
 } */
 
 /* #six {
+    position: relative;
     top: 450px;
 }  */
