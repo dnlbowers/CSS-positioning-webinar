@@ -18,7 +18,7 @@
                     <li><a href="" class="no-decor">Intro</a></li>
                     <li><a href="" class="no-decor">Sticky</a></li>
                     <li><a href="" class="no-decor">Fixed</a></li>
-                    <li><a href="" class="no-decor">relative/absolute</a></li>
+                    <li><a href="" class="no-decor">Absolute/Relative</a></li>
                     <li><a href="" class="no-decor">Flex</a></li>
                     <li><a href="" class="no-decor"><strike>Float</strike></a></li>
                 </ul>
@@ -44,6 +44,26 @@
                     </section>
                 </div>
                 <section>
+                    <h2>Position Sticky</h2>
+                    <p>This allows you to position something relative to the container element, until a condition is met. Then it becomes fixed. NOTE: This is all in relation to the containing element. So if you put position sticky on an element within the body, it'll be in relation to the entire page. If you put it on another element, it will become sticky or fixed, until it reaches the opposite edge of the container. Then it'll go back to relative.</p>
+                    <div class="container">
+                        <div class="container-sticky inner-container" id='container-sticky'>
+                            <div class="box" id='one-sticky'>One</div>
+                            <div class="box" id='two-sticky'>Two</div>
+                            <div class="box" id='three-sticky'>Three</div>
+                            <div class="box" id='four-sticky'>Four</div>
+                            <div class="box" id='five-sticky'>Five</div>
+                            <div class="box" id='six-sticky'>Six</div>
+                            <div class="box" id='seven-sticky'>Seven</div>
+                            <div class="box" id='eight-sticky'>Eight</div>
+                            <div class="box" id='nine-sticky'>Nine</div>
+                            <div class="box" id='ten-sticky'>Ten</div>
+                            <div class="box" id='eleven-sticky'>Eleven</div>
+                            <div class="box" id='twelve-sticky'>Twelve</div>
+                        </div>
+                    </div>
+                </section>
+                <section>
                     <h2 class="line-break">Position Absolute</h2>
                     <p>Takes things out of the document flow, so if we make box two position absolute, three and four will move up.</p>
                     <div class="container">
@@ -52,6 +72,18 @@
                             <div class="box" id='two'>Two</div>
                             <div class="box" id='three'>Three</div>
                             <div class="box" id='four'>Four</div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h2>Position Relative</h2>
+                    <p>Keeps things in the document flow, so if we make position box six, seven and eight will remain where they are.</p>
+                    <div class="container">
+                        <div class="inner-container relative" id='relative'>
+                            <div class="box" id='five'>Five</div>
+                            <div class="box" id='six'>Six</div>
+                            <div class="box" id='seven'>Seven</div>
+                            <div class="box" id='eight'>Eight</div>
                         </div>
                     </div>
                 </section>

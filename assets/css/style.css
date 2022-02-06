@@ -39,13 +39,6 @@ body {
     list-style: none;
 }
 
-section {
-    margin-top: 30px;
-    padding: 0 20px;
-}
-
-
-
 /* ----------------------------------------------------------Header */
 header {
     background: linear-gradient(#ae8625, #f7ef8a, #d2ac47, #edc967);
@@ -118,7 +111,5 @@ nav ul li a {
 
 
 
-/* #one {
-    position: relative;
-}
+
 
