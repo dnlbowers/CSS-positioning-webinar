@@ -58,6 +58,7 @@ nav ul li a {
 }
 
 main {
+    background: url('../images/curtains.jpg')no-repeat center/cover ;
     background-color: #f5f5dc;
     border-radius: 20px;
     height: 600px;
