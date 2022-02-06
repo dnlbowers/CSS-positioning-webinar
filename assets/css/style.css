@@ -6,10 +6,17 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #a52a2a;
+    color: #fafafa;
+    font-family: 'Roboto', sans-serif; 
+}
+
 /* -------------------------------------------Global */
 
 .heading {
     font-family: 'Bebas Neue', cursive;
+    font-size: 40px;
 }
 
 .text-center {
@@ -32,18 +39,22 @@
     list-style: none;
 }
 
-body {
-    background-color: #a52a2a;
-    font-family: 'Roboto', sans-serif;
+section {
+    margin-top: 30px;
+    padding: 0 20px;
 }
+
+
 
 /* ----------------------------------------------------------Header */
 header {
     background: linear-gradient(#ae8625, #f7ef8a, #d2ac47, #edc967);
+    color: #000;
+    font-weight: bold;
     text-align: center;
     letter-spacing: 3.5px;
     padding: 5px;
-    text-shadow: 3px 2px 8px black;
+    text-shadow: 3px 2px 8px #fff;
 }
 
 
@@ -65,13 +76,19 @@ nav ul li a {
 
 .container {
     background: linear-gradient(to right, #ae8625, #f7ef8a, #d2ac47, #edc967);
+    color: #000;
     padding: 10px;
     margin: 50px auto;
     border-radius: 30px;
     width: 95%;
 }
 
-main {
+.inner-container {
+    background-color: #fafafa;
+    border-radius: 20px;
+}
+
+#intro{
     background: url('../images/curtains.jpg')no-repeat center/100% 750px ;
     background-color: #f5f5dc;
     border-radius: 20px;
@@ -80,6 +97,28 @@ main {
     padding: 10px;
 }
 
-main h2 {
-    margin-top: 110px;
+.first-heading {
+    font-size: 70px;
+    margin-top: 120px;
+
 }
+
+/* -------------------------------boxes */
+.box {
+    
+    border: 2px solid #000;
+    height: 150px;
+    width: 150px;
+    border-radius: 20px;;
+    background-color: rgb(67, 140, 213);
+    text-align: center;
+    line-height: 150px;
+    font-size: 1.75rem;
+}
+
+
+
+/* #one {
+    position: relative;
+}
+

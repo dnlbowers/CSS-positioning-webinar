@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="assets/css/style.css" />
+        <link rel="stylesheet" href="assets/css/examples.css">
         <title>Document</title>
     </head>
     <body>
@@ -12,7 +13,7 @@
         <header>
             <h1 class="heading">CSS Positioning</h1>
             <h2 class="line-break">Webinar</h2>
-            <nav class=".flex-container heading line-break">
+            <nav class=".flex-container line-break">
                 <ul class="no-list-style">
                     <li><a href="" class="no-decor">Intro</a></li>
                     <li><a href="" class="no-decor">Sticky</a></li>
@@ -23,22 +24,40 @@
                 </ul>
             </nav>
         </header>
-        <div class="container">
+        
             <main class="text-center">
-                <h2 class="line-break heading">Welcome to the show</h2>
-                <p class="line-break">With your host... Me (David Bowers)</p>
-                <h3 class="heading">What will we cover?</h3>
-                <ul class="no-list-style">
-                    <li>HTML Flow, and why is it important</li>
-                    <li>Default display types (Block/inline)</li>
-                    <li>Positioning types (Static, Sticky, Fixed, Relative, and Absolute)</li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
+                <div class="container">
+                    <section id="intro">
+                        <h1 class="line-break heading first-heading">Welcome to the show</h1>
+                        <p class="line-break">With your host... Me (David Bowers)</p>
+                        <section>    
+                            <h2 class="heading line-break">What will we cover?</h2>
+                            <ul class="no-list-style">
+                                <li class="line-break">HTML Flow, and why is it important</li>
+                                <li class="line-break">Default display types (Block/inline)</li>
+                                <li class="line-break">Positioning types (Static, Sticky, Fixed, Relative, and Absolute)</li>
+                                <li class="line-break">Margin and padding to move and align</li>
+                                <li class="line-break">Float in brief and why personally I prefer Flexbox</li>
+                                <li class="line-break">Flexbox (in brief with a dev tool cheat to make it easy)</li>
+                            </ul>
+                        </section>
+                    </section>
+                </div>
+                <section>
+                    <h2 class="line-break">Position Absolute</h2>
+                    <p>Takes things out of the document flow, so if we make box two position absolute, three and four will move up.</p>
+                    <div class="container">
+                        <div class="inner-container absolute" id='absolute'>
+                            <div class="box" id='one'>One</div>
+                            <div class="box" id='two'>Two</div>
+                            <div class="box" id='three'>Three</div>
+                            <div class="box" id='four'>Four</div>
+                        </div>
+                    </div>
+                </section>
+
+
             </main>
-        </div>
+        
     </body>
 </html>
