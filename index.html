@@ -17,11 +17,14 @@
             <nav class=".flex-container line-break">
                 <ul class="no-list-style">
                     <li><a href="" class="no-decor">Intro</a></li>
-                    <li><a href="" class="no-decor">Sticky</a></li>
-                    <li><a href="" class="no-decor">Fixed</a></li>
-                    <li><a href="" class="no-decor">Absolute/Relative</a></li>
-                    <li><a href="" class="no-decor">Flex</a></li>
+                    <li><a href="#absolute" class="no-decor">Absolute</a></li>
+                    <li><a href="#relative" class="no-decor">Relative</a></li>
+                    <li><a href="#fixed" class="no-decor">Fixed</a></li>
+                    <li><a href="#sticky" class="no-decor">Sticky</a></li>
+                    <li><a href="#z-index" class="no-decor">z-index</a></li>
                     <li><a href="" class="no-decor"><strike>Float</strike></a></li>
+                    <li><a href="" class="no-decor">Flex</a></li>
+                    
                 </ul>
             </nav>
         </header>
@@ -37,6 +40,7 @@
                                 <li class="line-break">HTML Flow, and why is it important</li>
                                 <li class="line-break">Default display types (Block/inline)</li>
                                 <li class="line-break">Positioning types (Static, Sticky, Fixed, Relative, and Absolute)</li>
+                                <li class="line-break">Z-index</li>
                                 <li class="line-break">Margin and padding to move and align</li>
                                 <li class="line-break">Float in brief and why personally I prefer Flexbox</li>
                                 <li class="line-break">Flexbox (in brief with a dev tool cheat to make it easy)</li>
@@ -46,11 +50,11 @@
                 </div>
                 
                 <!-- absolute example -->
-                <section>
+                <section  id="absolute">
                     <h2 class="line-break">Position Absolute</h2>
                     <p>Takes things out of the document flow, so if we make box two position absolute, three and four will move up.</p>
                     <div class="container">
-                        <div class="inner-container absolute" id='absolute'>
+                        <div class="inner-container absolute">
                             <div class="box" id='one'>One</div>
                             <div class="box" id='two'>Two</div>
                             <div class="box" id='three'>Three</div>
@@ -60,11 +64,11 @@
                 </section>
 
                 <!-- relative example -->
-                <section>
-                    <h2>Position Relative</h2>
+                <section id='relative'>
+                    <h2 class="line-break">Position Relative</h2>
                     <p>Keeps things in the document flow, so if we make position box six, seven and eight will remain where they are.</p>
                     <div class="container">
-                        <div class="inner-container relative" id='relative'>
+                        <div class="inner-container relative">
                             <div class="box" id='five'>Five</div>
                             <div class="box" id='six'>Six</div>
                             <div class="box" id='seven'>Seven</div>
@@ -74,11 +78,11 @@
                 </section>
 
                 <!-- Fixed example  -->
-                <section>
-                    <h2>Position Fixed</h2>
+                <section  id='fixed'>
+                    <h2 class="line-break">Position Fixed</h2>
                     <p>This positions things relative to the viewport - the browser window itself. As it is positioned relative to the browser window itself, if the browser is resized it will move with the browser. It will sit in front of everything else, although you can change this using z-index.</p>
                 <div class="container">   
-                    <div class="inner-container fixed" id='fixed'>
+                    <div class="inner-container fixed">
                             <div class="box" id='nine'>Nine</div>
                             <div class="box" id='ten'>Ten</div>
                             <div class="box" id='eleven'>Eleven</div>
@@ -88,11 +92,11 @@
                 </section>
                 
                 <!-- Sticky example -->
-                <section>
-                    <h2>Position Sticky</h2>
+                <section id='sticky'>
+                    <h2 class="line-break">Position Sticky</h2>
                     <p>This allows you to position something relative to the container element, until a condition is met. Then it becomes fixed. NOTE: This is all in relation to the containing element. So if you put position sticky on an element within the body, it'll be in relation to the entire page. If you put it on another element, it will become sticky or fixed, until it reaches the opposite edge of the container. Then it'll go back to relative.</p>
                     <div class="container">
-                        <div class="container-sticky inner-container" id='container-sticky'>
+                        <div class="container-sticky inner-container">
                             <div class="box" id='one-sticky'>One</div>
                             <div class="box" id='two-sticky'>Two</div>
                             <div class="box" id='three-sticky'>Three</div>
@@ -108,11 +112,11 @@
                         </div>
                     </div>
                 </section>
-                <section>
-                    <h2>Positioning Keywords</h2>
+                <section id='position'>
+                    <h2 class="line-break">Positioning Keywords</h2>
                     <p>There are four positioning keywords, top, bottom, left and right. They accept any unit of measure as a value, so px's em's %'s or viewport units will work.' </p>
                     <div class="container">
-                        <div class="inner-container fixed" id='position'>
+                        <div class="inner-container fixed position">
                             <span class='top-position'><i class="fas fa-arrow-circle-up"> Top</i></span>
                             <span class='bottom-position'><i class="fas fa-arrow-circle-down"> Bottom</i></span>
                             <span class='left-position'><i class="fas fa-arrow-circle-left"> Left</i></span>
@@ -121,17 +125,18 @@
                     </div>
                 </section>
 
-                <section id='last-section'>
-                    <h2>Z-Index</h2>
+                <section  id='z-index'>
+                    <h2 class="line-break">Z-Index</h2>
                     <p>Z-Index specifies the layer order of elements. If you think the X axis is left to right, and the Y axis is up and down. The Z axis is towards the reader and away. It controls the layer order of the elements. The higher the number the closer to the reader the element appears. Values can be positive numbers or negative. Z-Index only works on positioned elements (absolute, relative, fixed, sticky) and flex items. If two elements overlap, and they have either the same z-index value, or none specified, the elements will appear in the order they appear in the HTML</p>
                     <div class="container">
-                        <div class="inner-container fixed" id='z-index'>
+                        <div class="inner-container fixed z-index">
                             <div class="layer1">Layer One</div>
                             <div class="layer2">Layer Two</div>
                             <div class="layer3">Layer Three</div>
                         </div>
                     </div>
                 </section>
+                <a id="end" href="#intro">Back to top </a>
 
             </main>
             <script src="https://kit.fontawesome.com/cd2a226592.js" crossorigin="anonymous"></script>

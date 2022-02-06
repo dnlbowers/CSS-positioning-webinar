@@ -39,6 +39,10 @@ body {
     list-style: none;
 }
 
+section p {
+    padding: 0 30px;
+}
+
 /* ----------------------------------------------------------Header */
 header {
     background: linear-gradient(#ae8625, #f7ef8a, #d2ac47, #edc967);
@@ -97,7 +101,7 @@ nav ul li a {
 }
 
 .second-heading {
-    margin-top: 26px;
+    margin-top: 10px;
 }
 
 /* -------------------------------boxes */
@@ -114,12 +118,12 @@ nav ul li a {
 }
 
 /* ---------------------------------- positioning keywords */
-#position {
+.position {
     height: 600px;
     position: relative;
 }
 
-#position span{
+.position span{
     
     height: 80px;
     width: 200px;
@@ -166,12 +170,12 @@ nav ul li a {
 
 /* -----------------------------z=index */
 
-#z-index {
+.z-index {
     position: relative;
     height: 600px;
 }
 
-#z-index > div {
+.z-index > div {
     height: 150px;
     width: 150px;
     border: 1px solid #000;
@@ -201,7 +205,7 @@ nav ul li a {
     left: 550px;
 }
 
-#last-section {
+#end {
     margin-bottom: 50px;
 }
 

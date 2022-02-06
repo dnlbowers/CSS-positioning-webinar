@@ -1,24 +1,3 @@
-/* ---------------------- Position Fixed example */
- 
-/*#ten {
-    position: fixed;
-    top: 400px;
-    right: 500px;
-} */
-
-/* ------------------------- Sticky Position Header example */
-
-/* #one-sticky {
-    position: sticky;
-    top: 400px;
-    left: 300px;
-} */
-
-/* header {
-    position: sticky;
-    top: 0px;
-} */
-
 /* ---------------------- Position Absolute example*/
 /* .absolute {
     position: relative;
@@ -41,6 +20,27 @@
     position: relative;
     top: 450px;
 }  */
+
+/* ---------------------- Position Fixed example */
+ 
+/*#ten {
+    position: fixed;
+    top: 400px;
+    right: 500px;
+} */
+
+/* ------------------------- Sticky Position Header example */
+
+/* #one-sticky {
+    position: sticky;
+    top: 400px;
+    left: 300px;
+} */
+
+/* header {
+    position: sticky;
+    top: 0px;
+} */
 
 /* ---------------------- z-index example */
 
