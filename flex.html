@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <link rel="stylesheet" href="assets/css/examples.css" />
+        <title>Positioning</title>
+    </head>
+    <body>
+        <header>
+            <h1 class="heading">CSS Positioning</h1>
+            <h2 class="line-break">Webinar</h2>
+
+            <nav class=".flex-container line-break">
+                <ul class="no-list-style">
+                    <li><a href="" class="no-decor">Intro</a></li>
+                    <li>
+                        <a href="index.html#absolute" class="no-decor"
+                            >Absolute</a
+                        >
+                    </li>
+                    <li>
+                        <a href="index.html#relative" class="no-decor"
+                            >Relative</a
+                        >
+                    </li>
+                    <li>
+                        <a href="index.html#fixed" class="no-decor">Fixed</a>
+                    </li>
+                    <li>
+                        <a href="index.html#sticky" class="no-decor">Sticky</a>
+                    </li>
+                    <li>
+                        <a href="index.html#z-index" class="no-decor"
+                            >z-index</a
+                        >
+                    </li>
+                    <li>
+                        <a href="" class="no-decor"><strike>Float</strike></a>
+                    </li>
+                    <li><a href="" class="no-decor">Flex</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="flex-section">
+                <p>
+                    To start using Flexbox you will first need to define a flex
+                    container. The image below shows a flex container with two
+                    flex items inside. This could be easily done using divs but
+                    could also be achieved using a range of other elements such
+                    as main, section, nav, header, footer or form
+                </p>
+                <div class="container">
+                    <div class="grid-container inner-container">
+                        <div class="main-size"><p>Main Size</p></div>
+                        <div class="cross-size"><p>Cross Size</p></div>
+                        <div class="flex-container-main">
+                            <div class="flex-item-main" id="flex-item-1">
+                                1
+                                <p id="flex-item-1-p">flex-item</p>
+                            </div>
+                            <div class="flex-item-main" id="flex-item-2">
+                                2
+                                <p id="flex-item-2-p">flex-item</p>
+                            </div>
+                            <p id="flex-container-1">flex-container</p>
+                            <i class="arrow right"></i>
+                            <i class="arrow down"></i>
+                            <div class="downline"></div>
+                            <div class="rightline"></div>
+                        </div>
+                        <div class="crossstart"><p>Cross Start</p></div>
+                        <div class="mainaxis"><p>Main Axis</p></div>
+                        <div class="crossend"><p>Cross End</p></div>
+                        <div class="mainstart"><p>Main Start</p></div>
+                        <div class="crossaxis"><p>Cross Axis</p></div>
+                        <div class="mainend"><p>Main End</p></div>
+                    </div>
+                </div>
+                <p>
+                    Items will be laid out following either the main
+                    axis (from main-start to main-end) or the cross axis
+                    (from cross-start to cross-end).<br /><br />
+
+                    <strong>main axis</strong> – The main axis of a flex
+                    container is the primary axis along which flex items
+                    are laid out. Beware, it is not necessarily
+                    horizontal; it depends on the flex-direction
+                    property.<br />
+                    <strong>main-start | main-end</strong> – The flex
+                    items are placed within the container starting from
+                    main-start and going to main-end.<br />
+                    <strong>main size</strong> – A flex item’s width or
+                    height, whichever is in the main dimension, is the
+                    item’s main size. The flex item’s main size property
+                    is either the ‘width’ or ‘height’ property,
+                    whichever is in the main dimension.<br />
+                    <strong>cross axis</strong> – The axis perpendicular
+                    to the main axis is called the cross axis. Its
+                    direction depends on the main axis direction.<br />
+                    <strong>cross-end</strong> – Flex lines are filled
+                    with items and placed into the container starting on
+                    the cross-start side of the flex container and going
+                    toward the cross-end side.<br />
+                    <strong>cross size</strong> – The width or height of
+                    a flex item, whichever is in the cross dimension, is
+                    the item’s cross size. The cross size property is
+                    whichever of ‘width’ or ‘height’ that is in the
+                    cross dimension.
+                </p>
+                
+            </section>
+            <section class='flex-section'>
+                    <h2>Flex Direction</h2>
+                    <p>Flex direction defines the axis in which the container should stack the flex items. Rows are horizontal whilst Columns are vertical.</p>
+                    <p>There are four options available with row being the default.<br> row, row-reverse, column & column-reverse</p>
+                <div class="container">
+                    <div class="inner-container">   
+                        <div class="selection-container">
+                            <select name="direction" id="direction-select">
+                                <option value="row">row</option>
+                                <option value="row-reverse">row-reverse</option>
+                                <option value="column">column</option>
+                                <option value="column-reverse">column-reverse</option>
+                            </select>
+                            <span class='code-snippet'>flex-direction: <span class='code-value' id='flex-direction-span'></span></span>
+                        </div>
+                     
+                        <div class="flex" id='flex-direction'>
+                            <div>1</div>
+                            <div>2</div>
+                            <div>3</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class='flex-section'>
+                <h2>Flex Wrap</h2>
+                <p>Flex direction defines the axis in which the container should stack the flex items. Rows are horizontal whilst Columns are vertical.</p>
+                <p>There are three options available with nowrap being the default.<br> nowrap, wrap & wrap-reverse</p>
+                <div class="selection-container">
+                    <select name="wrap" id="wrap-select">
+                        <option value="nowrap">nowrap</option>
+                        <option value="wrap">wrap</option>
+                        <option value="wrap-reverse">wrap-reverse</option>
+                    </select>
+                    <span class='code-snippet'>flex-wrap: <span class='code-value' id='flex-wrap-span'></span></span>            
+                </div>
+                <div class="flex flex-wrap-container" id='flex-wrap'>
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+                    <div>5</div>
+                    <div>6</div>
+                </div>
+            </section>
+        
+            <section class='flex-section'>
+                <h2>Flex Flow</h2>
+                <p>Flex </p>
+                <p>There are three options available with nowrap being the default.<br> nowrap, wrap & wrap-reverse</p>
+                <div class="selection-container">
+                    <select name="flow" id="flow-select">
+                        <option value="row nowrap">row nowrap</option>
+                        <option value="row wrap">row wrap</option>
+                        <option value="row wrap-reverse">wrap-reverse</option>
+                        <option value="row-reverse nowrap">row-reverse nowrap</option>
+                        <option value="row-reverse wrap">row-reverse wrap</option>
+                        <option value="row-reverse wrap-reverse">row-reverse wrap-reverse</option>
+                        <option value="column nowrap">column nowrap</option>
+                        <option value="column wrap">column wrap</option>
+                        <option value="column wrap-reverse">column wrap-reverse</option>
+                        <option value="column-reverse nowrap">column-reverse nowrap</option>
+                        <option value="column-reverse wrap">column-reverse wrap</option>
+                        <option value="column-reverse wrap-reverse">column-reverse wrap-reverse</option>
+                    </select>
+                    <span class='code-snippet'>flex-flow: <span class='code-value' id='flex-flow-span'></span></span>
+                </div>
+                <div class="flex flex-flow-container" id='flex-flow'>
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+                    <div>5</div>
+                    <div>6</div>
+                </div>
+            </section>
+        
+            <section class='flex-section'>
+                <h2>Justify Content</h2>
+                <p>Flex </p>
+                <p>There are three options available with nowrap being the default.<br> nowrap, wrap & wrap-reverse</p>
+                <div class="selection-container">
+                    <select name="flow" id="justify-content-select">
+                        <option value="flex-start">flex-start</option>
+                        <option value="flex-end">flex-end</option>
+                        <option value="center">center</option>
+                        <option value="space-between">space-between</option>
+                        <option value="space-around">space-around</option>
+                        <option value="space-evenly">space-evenly</option>
+                    </select>
+                    <span class='code-snippet'>justify-content: <span class='code-value' id='justify-content-span'></span></span>
+                </div>
+                <div class="flex justify-content-container" id='justify-content'>
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                </div>
+            </section>
+            
+            <section class='flex-section'>
+                <h2>Align Items</h2>
+                <p>Similar to the way justify-content works, but for the cross axis. There are more options available than listed here, which have subtle but useful differences whilst respecting other styling rules. Check out your favourite reference material for more details. </p>
+                <p>Here are five of the options available with stretch being the default, whilst respecting width/min-width/max-width values.<br> stretch, flex-start, flex-end, center, baseline</p>
+                <div class="selection-container">
+                    <select name="flow" id="align-items-select">
+                        <option value="flex-start">flex-start</option>
+                        <option value="flex-end">flex-end</option>
+                        <option value="center">center</option>
+                        <option value="stretch">stretch</option>
+                        <option value="baseline">baseline</option>
+                    </select>
+                    <span class='code-snippet'>align-items: <span class='code-value' id='align-items-span'></span></span>        
+                </div>
+                <div class="flex align-items-container" id='align-items'>
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                </div>
+            </section>
+            
+            <section class='flex-section'>
+                <h2>Align Content</h2>
+                <p>Similar to the way justify-content works, but for the cross axis. There are more options available than listed here, which have subtle but useful differences whilst respecting other styling rules. Check out your favourite reference material for more details. </p>
+                <p>Here are five of the options available with stretch being the default, whilst respecting width/min-width/max-width values.<br> stretch, flex-start, flex-end, center, baseline</p>
+                <div class="selection-container">
+                    <select name="flow" id="align-content-select">
+                        <option value="normal">normal</option>
+                        <option value="flex-start">flex-start</option>
+                        <option value="flex-end">flex-end</option>
+                        <option value="center">center</option>
+                        <option value="stretch">stretch</option>
+                        <option value="space-between">space-between</option>
+                        <option value="space-around">space-around</option>
+                        <option value="space-evenly">space-evenly</option>
+                    </select>
+                    <span class='code-snippet'>align-content: <span class='code-value' id='align-content-span'></span></span>
+                </div>
+                <div class="flex align-content-container" id='align-content'>
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+                    <div>5</div>
+                    <div>6</div>
+                </div>
+            </section>
+            
+            <section class='flex-section'>
+                <h2>Gap, row-gap, column-gap</h2>
+                <p>Similar to the way justify-content works, but for the cross axis. There are more options available than listed here, which have subtle but useful differences whilst respecting other styling rules. Check out your favourite reference material for more details. </p>
+                <p>Here are five of the options available with stretch being the default, whilst respecting width/min-width/max-width values.<br> stretch, flex-start, flex-end, center, baseline</p>
+                <div class="selection-container">
+                    <div id="gap-select">
+                        <label for="gap-slider">gap</label>
+                        <input type="range" min="0" max="200" value="0" class="slider" id="gap-slider">
+                        <span id="slider-value">0px</span>
+                    </div>
+                    <span class='code-snippet'>gap: <span class='code-value' id='gap-span'></span></span>
+                </div>
+                <div class="flex gap-container" id='gap'>
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
+                    <div>5</div>
+                    <div>6</div>
+                </div>
+            </section>
+            
+            <section class='flex-section'>
+                <h2>Order</h2>
+                <p>Similar to the way justify-content works, but for the cross axis. There are more options available than listed here, which have subtle but useful differences whilst respecting other styling rules. Check out your favourite reference material for more details. </p>
+                <p>Here are five of the options available with stretch being the default, whilst respecting width/min-width/max-width values.<br> stretch, flex-start, flex-end, center, baseline</p>
+                <div class="selection-container">
+                    <div id="order-select">
+                        <label for="order-input-1">Item #1</label>
+                        <input type="number" value="0" id="order-input-1">
+                        <label for="order-input-2">Item #2</label>
+                        <input type="number" value="0" id="order-input-2">
+                        <label for="order-input-3">Item #3</label>
+                        <input type="number" value="0" id="order-input-3">
+                        <label for="order-input-4">Item #4</label>
+                        <input type="number" value="0" id="order-input-4">
+                    </div>
+                    <div class="code-snippet-container">
+                        <span class='code-snippet flex-item-code-snippet' id="code-snippet-order-1">
+                            <pre>
+        <span class="style-rule">#order-item-1 </span><span class="curly">{</span>
+            order: <span class='code-value' id='order-span-1'></span>
+        <span class="curly">}</span></pre>
+        </span>
+                        <span class='code-snippet flex-item-code-snippet' id="code-snippet-order-2">
+                            <pre>
+        <span class="style-rule">#order-item-2 </span><span class="curly">{</span>
+            order: <span class='code-value' id='order-span-2'></span>
+        <span class="curly">}</span></pre>
+        </span>
+                        <span class='code-snippet flex-item-code-snippet' id="code-snippet-order-3">
+                            <pre>
+        <span class="style-rule">#order-item-3 </span><span class="curly">{</span>
+            order: <span class='code-value' id='order-span-3'></span>
+        <span class="curly">}</span></pre>
+        </span>
+                        <span class='code-snippet flex-item-code-snippet' id="code-snippet-order-4">
+                            <pre>
+        <span class="style-rule">#order-item-4 </span><span class="curly">{</span>
+            order: <span class='code-value' id='order-span-4'></span>
+        <span class="curly">}</span></pre>
+        </span>
+                    </div>
+                </div>
+                <div class="flex order-container" id='order'>
+                    <div id="order-item-1">1</div>
+                    <div id="order-item-2">2</div>
+                    <div id="order-item-3">3</div>
+                    <div id="order-item-4">4</div>
+                </div>
+            </section>
+        
+            <section class='flex-section'>
+                <h2>Grow</h2>
+                <p>Similar to the way justify-content works, but for the cross axis. There are more options available than listed here, which have subtle but useful differences whilst respecting other styling rules. Check out your favourite reference material for more details. </p>
+                <p>Here are five of the options available with stretch being the default, whilst respecting width/min-width/max-width values.<br> stretch, flex-start, flex-end, center, baseline</p>
+                <div class="selection-container">
+                    <div id="grow-select">
+                        <label for="grow-input-1">Item #1</label>
+                        <input type="number" value="0" id="grow-input-1">
+                        <label for="grow-input-2">Item #2</label>
+                        <input type="number" value="0" id="grow-input-2">
+                        <label for="grow-input-3">Item #3</label>
+                        <input type="number" value="0" id="grow-input-3">
+                        <label for="grow-input-4">Item #4</label>
+                        <input type="number" value="0" id="grow-input-4">
+                    </div>
+                    <div class="code-snippet-container">
+                        <span class='code-snippet flex-item-code-snippet' id="code-snippet-grow-1">
+                            <pre>
+        <span class="style-rule">#grow-item-1 </span><span class="curly">{</span>
+            flew-grow: <span class='code-value' id='grow-span-1'></span>
+        <span class="curly">}</span></pre>
+        </span>
+                        <span class='code-snippet flex-item-code-snippet' id="code-snippet-grow-2">
+                            <pre>
+        <span class="style-rule">#grow-item-2 </span><span class="curly">{</span>
+            flex-grow: <span class='code-value' id='grow-span-2'></span>
+        <span class="curly">}</span></pre>
+        </span>
+                        <span class='code-snippet flex-item-code-snippet' id="code-snippet-grow-3">
+                            <pre>
+        <span class="style-rule">#grow-item-3 </span><span class="curly">{</span>
+            flex-grow: <span class='code-value' id='grow-span-3'></span>
+        <span class="curly">}</span></pre>
+        </span>
+                        <span class='code-snippet flex-item-code-snippet' id="code-snippet-grow-4">
+                            <pre>
+        <span class="style-rule">#grow-item-4 </span><span class="curly">{</span>
+            flex-grow: <span class='code-value' id='grow-span-4'></span>
+        <span class="curly">}</span></pre>
+        </span>
+                    </div>
+                </div>
+                <div class="flex grow-container" id='grow'>
+                    <div id="grow-item-1">1</div>
+                    <div id="grow-item-2">2</div>
+                    <div id="grow-item-3">3</div>
+                    <div id="grow-item-4">4</div>
+                </div>
+            </section>
+            <section class='flex-section'>
+                <h2>Shrink</h2>
+                <p>Similar to the way justify-content works, but for the cross axis. There are more options available than listed here, which have subtle but useful differences whilst respecting other styling rules. Check out your favourite reference material for more details. </p>
+                <p>Here are five of the options available with stretch being the default, whilst respecting width/min-width/max-width values.<br> stretch, flex-start, flex-end, center, baseline</p>
+                <div class="selection-container">
+                    <div id="shrink-select">
+                        <label for="shrink-input-1">Item #1</label>
+                        <input type="number" value="1" id="shrink-input-1">
+                        <label for="shrink-input-2">Item #2</label>
+                        <input type="number" value="1" id="shrink-input-2">
+                        <label for="shrink-input-3">Item #3</label>
+                        <input type="number" value="1" id="shrink-input-3">
+                        <label for="shrink-input-4">Item #4</label>
+                        <input type="number" value="1" id="shrink-input-4">
+                    </div>
+                    <div class="code-snippet-container">
+                        <span class='code-snippet flex-item-code-snippet' id="code-snippet-shrink-1">
+                            <pre>
+        <span class="style-rule">#shrink-item-1 </span><span class="curly">{</span>
+            flew-shrink: <span class='code-value' id='shrink-span-1'></span>
+        <span class="curly">}</span></pre>
+        </span>
+                        <span class='code-snippet flex-item-code-snippet' id="code-snippet-shrink-2">
+                            <pre>
+        <span class="style-rule">#shrink-item-2 </span><span class="curly">{</span>
+            flex-shrink: <span class='code-value' id='shrink-span-2'></span>
+        <span class="curly">}</span></pre>
+        </span>
+                        <span class='code-snippet flex-item-code-snippet' id="code-snippet-shrink-3">
+                            <pre>
+        <span class="style-rule">#shrink-item-3 </span><span class="curly">{</span>
+            flex-shrink: <span class='code-value' id='shrink-span-3'></span>
+        <span class="curly">}</span></pre>
+        </span>
+                        <span class='code-snippet flex-item-code-snippet' id="code-snippet-shrink-4">
+                            <pre>
+        <span class="style-rule">#shrink-item-4 </span><span class="curly">{</span>
+            flex-shrink: <span class='code-value' id='shrink-span-4'></span>
+        <span class="curly">}</span></pre>
+        </span>
+                    </div>
+                </div>
+                <div class="flex shrink-container" id='shrink'>
+                    <div id="shrink-item-1">1</div>
+                    <div id="shrink-item-2">2</div>
+                    <div id="shrink-item-3">3</div>
+                    <div id="shrink-item-4">4</div>
+                </div>
+            </section>
+        
+        
+        
+        
+            <script src="assets/js/scripts.js"></script>
+        </body>
+        </html>
+        </main>
+    </body>
+</html>
