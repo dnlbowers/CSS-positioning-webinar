@@ -1,9 +1,9 @@
 /* ---------------------- Position Absolute example*/
 /* .absolute {
     position: relative;
-}  
+}  */
 
-#two {
+/* #two {
     position:absolute;
     top: 100px;
     left: 250px;
@@ -23,7 +23,7 @@
 
 /* ---------------------- Position Fixed example */
  
-/*#ten {
+/* #ten {
     position: fixed;
     top: 400px;
     right: 500px;
